@@ -1,12 +1,14 @@
-import { Component } from "react";
-import  Tile_Container  from './tile';
+import React ,{ Component } from "react";
+import TileContainer from './tile_container';
+import TileInfoContainer from "./tile_info_container";
 
 export default class Container extends Component {
     render() {
         return (
-            <div className={"container"}>
-                <Tile_Container />
-            </div>
+            <section className={"container"}>
+                <TileContainer />
+                <TileInfoContainer />
+            </section>
         );
     }
 }

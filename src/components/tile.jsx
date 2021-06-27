@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 
 
 export default class Tile extends Component {
@@ -7,10 +7,13 @@ export default class Tile extends Component {
             <div className={"tile"}>
                 <div>
                     <div>
-
+                        <i aria-hidden="true" className={this.props.tileClass}></i>
                     </div>
-                    <h3 className={"tile_title"}>{ this.props.title }</h3>
-                    <h3 className={"tile_title"}>Logos</h3>
+                    <h3 className={"tile_title"}>
+                        {this.props.title}
+                        <br />
+                        Logos
+                    </h3>
                 </div>
             </div>
         );
