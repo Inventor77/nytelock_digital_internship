@@ -1,15 +1,171 @@
-#353535
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+:root {
+	--clr-primary: #353535;
+	--clr-secondary: #ffcc29;
+	--white: #fff;
+	--background-gradient: linear-gradient(145deg, #4f4f4f 0%, #282828 100%);
+	--primary-text: #fff;
+	--secondary-text: #1a1b1e;
 }
-.tile {
-  text-align: center;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
+
+/* tileContainer style  */
+
+.tile_container {
+	display: flex;
+	flex-direction: column;
+	margin: 2.25rem auto;
+	padding: 110px 0px 90px 0px;
+	background: var(--background-gradient);
+	max-width: 87vw;
+	color: var(--primary-text);
+	border-radius: 15px;
+	align-items: center;
+}
+
+.upper_section {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	height: 115px;
+	min-width: 65rem;
+	/* border: 1px solid#1a1b1e; */
+}
+
+.sub-heading {
+	font-family: "Montserrat", Montserrat;
+	font-weight: bold;
+	margin: 0px 0px 1rem;
+	color: var(--clr-secondary);
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-align: left;
+	text-transform: uppercase;
+	word-wrap: break-word;
+}
+.main-heading {
+	font-family: "Montserrat", Montserrat;
+	font-size: 36px;
+	line-height: 1.2;
+	text-align: left;
+	font-weight: 500;
+	margin-bottom: 0px;
+	color: var(--primary-text);
+	word-wrap: break-word;
+}
+.lower_section {
+	display: flex;
+	min-width: 67rem;
+	justify-content: space-between;
+}
+
+/* tileContainer style ends */
+
+/* Tile style */
+.tile {
+	padding: 0 0.8rem;
+	/* padding: 2rem 1rem; */
+	height: 10.8rem;
+	width: 10.8rem;
+	text-align: center;
+	transition: all 0.3s linear;
+}
+.tile_content {
+	position: relative;
+	padding: 30px 15px;
+	height: 9.5rem;
+	width: 9.5rem;
+	font-family: "Montserrat", Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 30px;
+	letter-spacing: -0.2px;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 15px;
+	cursor: pointer;
+	z-index: 1;
+}
+.tile_content:hover {
+	background: var(--white);
+	color: var(--secondary-text);
+	transition: all 0.5s;
+}
+.tile_content:hover i {
+	color: var(--secondary-text);
+	transition: all 0.5s;
+}
+
+.bubble::after {
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	margin-left: -20px;
+	background: var(--primary-text);
+	opacity: 1;
+	/* visibility: hidden; */
+	transform: rotate(-45deg);
+	border-radius: 4px;
+}
+
+.tile_content i {
+	color: var(--clr-secondary);
+	font-size: 2rem;
+	margin: 0px 0px 1rem;
+	
+}
+/* Tile style ends*/
+
+/* TileInfoContainer style  */
+
+.tile_info_container {
+	display: flex;
+	margin: 75px auto;
+	padding: 15px;
+}
+
+.tile_img {
+	width: 570px;
+}
+
+.tile_img img {
+	width: 540px;
+}
+
+.tile_info {
+	padding: 0px 80px 0px 15px;
+	width: 570px;
+}
+
+@media (min-width: 768px) {
+	.tile_info_container {
+		max-width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.tile_info_container {
+		max-width: 970px;
+	}
+}
+@media (min-width: 1230px) {
+	.tile_info_container {
+		max-width: 1200px;
+	}
+}
+
+/* TileInfoContainer style ends */

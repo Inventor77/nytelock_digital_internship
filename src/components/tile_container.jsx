@@ -35,7 +35,7 @@ function TileContainer({ setIndex }) {
             <section className="upper_section" >
                 <div className="container_header">
                     <h4 className="sub-heading"><span><li>How do I know which logo style is right for me?</li></span></h4>
-                    <h1 className="main-heading">Different Types of Logo Styes</h1>
+                    <h1 className="main-heading">Different Types of Logo Styles</h1>
                 </div>
                 <div className="container_nav">
                     <div className="button">
