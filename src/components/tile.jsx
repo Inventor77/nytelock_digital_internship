@@ -1,21 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import '../App.css';
 
 
-export default class Tile extends Component {
-    render() {
-        return (
-            <div className={"tile"}>
+function Tile({ setIndex, idx, ...props }) {
+    return (
+        <div className={"tile"} onClick={() => setIndex(idx)}>
+            <div>
                 <div>
-                    <div>
-                        <i aria-hidden="true" className={this.props.tileClass}></i>
-                    </div>
-                    <h3 className={"tile_title"}>
-                        {this.props.title}
-                        <br />
-                        Logos
-                    </h3>
+                    <i aria-hidden="true" className={props.tileClass}></i>
                 </div>
+                <h3 className={"tile_title"}>
+                    {props.title}
+                    <br />
+                    Logos
+                </h3>
             </div>
-        );
-    }
+        </div>
+    );
 }
+
+export default Tile

@@ -1,9 +1,10 @@
 import React from "react";
 import Tile from './tile';
 import { useState } from "react";
+import '../App.css';
 
 
-function TileContainer() {
+function TileContainer({ setIndex }) {
     const [tileArr] = useState([
         {
             tile_title: "Lettermark",
@@ -39,14 +40,14 @@ function TileContainer() {
                 <div className="container_nav">
                     <div className="button">
                         <a href="https://nytelock.com/quote" target="_blank" rel="noreferrer" className="nav_btn">
-                            <span>Contact Us<i className=""></i></span>
+                            <span>Contact Us<i className="fas fa-long-arrow-alt-right"></i></span>
                         </a>
                     </div>
                 </div>
             </section>
             <section className="lower_section">
-                {tileArr.map(obj => {
-                    return <Tile title={obj.tile_title} tileClass={obj.tile_icon} />
+                {tileArr.map((obj, index) => {
+                    return <Tile key={index} setIndex={setIndex} idx={index} title={obj.tile_title} tileClass={obj.tile_icon} />
                 })}
             </section>
         </div>
