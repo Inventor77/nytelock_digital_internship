@@ -30,6 +30,8 @@ function TileContainer({ setIndex }) {
             tile_title: "Combination",
             tile_icon: "fas fa-puzzle-piece"
         }])
+    const [boolClass] = useState([true, false, false, false, false, false,])
+
     return (
         <div className="tile_container">
             <section className="upper_section" >
@@ -49,7 +51,7 @@ function TileContainer({ setIndex }) {
             </section>
             <section className="lower_section">
                 {tileArr.map((obj, index) => {
-                    return <Tile key={index} setIndex={setIndex} idx={index} title={obj.tile_title} tileClass={obj.tile_icon} />
+                    return <Tile key={index} setIndex={setIndex} idx={index} title={obj.tile_title} tileClass={obj.tile_icon} boolClass={ boolClass }/>
                 })}
             </section>
         </div>

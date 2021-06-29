@@ -41,6 +41,7 @@ a {
 
 .upper_section {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-between;
 	height: 115px;
@@ -136,6 +137,7 @@ a {
 
 .lower_section {
 	display: flex;
+	flex-wrap: wrap;
 	max-width: 75rem;
 	justify-content: space-between;
 }
@@ -157,10 +159,10 @@ a {
 	height: 170px;
 	width: 170px;
 	font-family: var(--font-family);
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 20px;
+	font-weight: 200;
 	line-height: 30px;
-	letter-spacing: -0.6px;
+	letter-spacing: -0.9px;
 	border: 1px solid rgba(255, 255, 255, 0.25);
 	border-radius: 15px;
 	cursor: pointer;
@@ -169,6 +171,7 @@ a {
 .tile_content:hover {
 	background: var(--white);
 	color: var(--secondary-text);
+	text-decoration: 2px solid var(--clr-secondary) underline;
 	transition: all 0.5s;
 }
 .tile_content:hover i {
@@ -176,7 +179,16 @@ a {
 	transition: all 0.5s;
 }
 
-.bubble::after {
+.cloud {
+	background: var(--white);
+	color: var(--secondary-text);
+}
+
+.cloud i {
+	color: var(--secondary-text) !important;
+}
+
+.cloud::after {
 	content: "";
 	width: 40px;
 	height: 40px;
@@ -186,9 +198,9 @@ a {
 	margin-left: -20px;
 	background: var(--primary-text);
 	opacity: 1;
-	/* visibility: hidden; */
 	transform: rotate(-45deg);
 	border-radius: 4px;
+	z-index: -1;
 }
 
 .tile_content i {
@@ -202,6 +214,7 @@ a {
 
 .tile_info_container {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 85px auto;
 	padding: 15px;
 	width: 1140px;
