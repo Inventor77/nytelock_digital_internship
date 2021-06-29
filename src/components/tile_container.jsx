@@ -34,13 +34,15 @@ function TileContainer({ setIndex }) {
         <div className="tile_container">
             <section className="upper_section" >
                 <div className="container_header">
-                    <h4 className="sub-heading"><span><li>How do I know which logo style is right for me?</li></span></h4>
+                    <h4 className="sub-heading"><li><span>How do I know which logo style is right for me?</span></li></h4>
                     <h1 className="main-heading">Different Types of Logo Styles</h1>
                 </div>
                 <div className="container_nav">
                     <div className="button">
+                        <span className="span"></span>
                         <a href="https://nytelock.com/quote" target="_blank" rel="noreferrer" className="nav_btn">
-                            <span>Contact Us<i className="fas fa-long-arrow-alt-right"></i></span>
+                            <span>Contact Us</span>
+                            <i className="fas fa-long-arrow-alt-right"></i>
                         </a>
                     </div>
                 </div>

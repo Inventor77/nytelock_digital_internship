@@ -7,21 +7,22 @@ import '../App.css';
 
 const TileInfo = props => {
     useEffect(() => {
-        document.querySelector('.para').innerHTML = props.para;
+        document.querySelector('.info_para').innerHTML = props.para;
     }, [props])
     return (
         <div className="tile_info">
-            <h2>{props.head}</h2>
-            <div className="para"></div>
+            <h2 className="info_head">{props.head}</h2>
+            <div className="info_para"></div>
         </div>
-
     );
 }
 
 const TileImg = props => {
     return (
         <div className="tile_img">
-            <img src={props.srcImg} alt={props.info_title} />
+            <div className="tile_img_container">
+                <img src={props.srcImg} alt={props.info_title} />
+            </div>
         </div>
     );
 }
