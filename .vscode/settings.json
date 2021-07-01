@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "Lettermark"
-    ]
+    ],
+    "files.associations": {
+        "string": "cpp"
+    }
 }

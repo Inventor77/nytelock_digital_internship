@@ -1,7 +1,6 @@
 import React from "react";
 import Tile from './tile';
-import { useState } from "react";
-import '../App.css';
+import { useState, useEffect } from "react";
 
 
 function TileContainer({ setIndex }) {
@@ -35,7 +34,7 @@ function TileContainer({ setIndex }) {
     return (
         <div className="tile_container">
             <section className="upper_section" >
-                <div className="container_header">
+                <div className="container_header">  
                     <h4 className="sub-heading"><li><span>How do I know which logo style is right for me?</span></li></h4>
                     <h1 className="main-heading">Different Types of Logo Styles</h1>
                 </div>
@@ -50,9 +49,12 @@ function TileContainer({ setIndex }) {
                 </div>
             </section>
             <section className="lower_section">
-                {tileArr.map((obj, index) => {
-                    return <Tile key={index} setIndex={setIndex} idx={index} title={obj.tile_title} tileClass={obj.tile_icon} boolClass={ boolClass }/>
-                })}
+                <div className="container_tiles">
+                        {tileArr.map((obj, index) => (
+                                <Tile key={index} setIndex={setIndex} idx={index} title={obj.tile_title} tileClass={obj.tile_icon} boolClass={boolClass} />
+                        ))}
+                </div>
+
             </section>
         </div>
     );
